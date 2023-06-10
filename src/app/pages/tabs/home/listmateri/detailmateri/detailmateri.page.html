@@ -1,0 +1,21 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detail Materi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="DataUser" class="ion-padding">
+    <h1>{{DataUser.judul_materi}}</h1>
+    <span>{{DataUser.mapel.kode_mapel}} </span>
+    <p>{{DataUser.deskripsi_materi}} </p>
+    <img alt="Gambar Materi" src="{{ DataUser.gambar_materi }}" />
+    <!-- <ion-button expand="full" (click)="GetMateri(nim)">Get Photo</ion-button>
+  <ion-img *ngIf="DataUser" [src]="{{DataUser.gambar_materi}}"></ion-img> -->
+
+    <ion-text color="medium">
+
+      <br/>
+    </ion-text>
+  </div>
+</ion-content>
