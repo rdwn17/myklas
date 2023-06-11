@@ -15,13 +15,13 @@
   </ion-toolbar>
   </div>
 
-  <ion-item line="none">
+  <ion-item *ngIf="item" line="none">
     <ion-avatar slot="end">
-      <img src="assets/images/bayi.png">
+      <img alt="Foto Profile" src="{{item.foto}}">
     </ion-avatar>
     <ion-label>
       <p>Hello</p>
-      <h3>Selamat Datang</h3>
+      <h3>Selamat Datang, {{item.name_mus}}</h3>
 
     </ion-label>
   </ion-item>
@@ -41,7 +41,7 @@
             <ion-label>
               <h3>{{ key.nama_mapel }} - {{ key.nama_guru}}</h3>
               <p>
-                {{ key.periode_kelas }} - {{ key.id_mapel }}
+                {{ key.nama_kelas }} - {{ key.peiode}}
               </p>
             </ion-label>
             <ion-button color="primary" slot="end" [routerLink]="['/tabs/home/listmateri/',key.id_mapel]"

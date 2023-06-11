@@ -18,11 +18,6 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
-
-  {
-    path: 'tugas',
-    loadChildren: () => import('./pages/tugas/tugas.module').then( m => m.TugasPageModule)
-  },
   {
     path: 'formtugas/:nim',
     loadChildren: () => import('./pages/formtugas/formtugas.module').then( m => m.FormtugasPageModule)

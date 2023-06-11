@@ -12,13 +12,21 @@
     <h1>{{DataUser.judul_materi}}</h1>
     <span>{{DataUser.mapel.kode_mapel}} </span>
     <p>{{DataUser.deskripsi_materi}} </p>
+    <ion-item>
+      <ion-label>File Lampiran</ion-label>
+      <ion-button (click)="simpan(DataUser.id_materi)" slot="end">Buka</ion-button>
+    </ion-item>
     <img alt="Gambar Materi" src="{{ DataUser.gambar_materi }}" />
-    <!-- <ion-button expand="full" (click)="GetMateri(nim)">Get Photo</ion-button>
-  <ion-img *ngIf="DataUser" [src]="{{DataUser.gambar_materi}}"></ion-img> -->
 
-    <ion-text color="medium">
 
-      <br/>
-    </ion-text>
+      <iframe
+        width="100%"
+        height="100%"
+        frameborder="0"
+        style="border:0"
+        src="{{DataUser.file_materi}}"
+        allowfullscreen
+      ></iframe>
+
   </div>
 </ion-content>

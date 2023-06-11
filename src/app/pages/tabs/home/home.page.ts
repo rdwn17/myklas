@@ -14,6 +14,7 @@ export class HomePage implements OnInit {
   public userLongitude: any;
   pemilihans: any;
   form:any;
+  item:any;
 
   constructor(
     private router : Router,
@@ -26,7 +27,18 @@ export class HomePage implements OnInit {
     DataUser : any;
     DataTugas: any;
 
+    async getAllPemilihan() {
+      const res = await fetch('https://myschool.jamaahcoding.my.id/api/profil', {
+        method: 'GET',
+        headers: {
+          // 'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + localStorage.getItem('token')
+        }
+      });
 
+      const json = await res.json();
+      this.item = json.data;
+    }
   GetAllMapel(){
     this.api.GetShowAllMapel().subscribe( (res:any) =>{
       this.DataUser = res['data'];
@@ -124,6 +136,7 @@ export class HomePage implements OnInit {
     this.GetAllMapel();
     this.GetAllTugas();
     // this.GetAllMapel();
+    this.getAllPemilihan();
   }
 
 }

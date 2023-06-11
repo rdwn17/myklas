@@ -11,6 +11,7 @@ export class DetailmateriPage implements OnInit {
 
   DataUser:any;
   nim:any;
+  DataFile:any;
 
 
   constructor(
@@ -39,6 +40,15 @@ export class DetailmateriPage implements OnInit {
   }
   doBack(){
     this.router.navigateByUrl('tabs')
+  }
+  simpan(nim:any){
+    this.api.GetDetailMateri(nim).subscribe((res:any) =>{
+      this.DataFile = res['data'];
+      console.log('Data User ===>'+JSON.stringify( res['data']) );
+      console.log('berhasil')
+      window.open(this.DataFile.file_materi, '_system');
+    });
+
   }
 
   // getPhotoFromAPI(nim:any) {
