@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class DetailmateriPage implements OnInit {
 
+
   DataUser:any;
   nim:any;
   DataFile:any;
@@ -18,6 +19,7 @@ export class DetailmateriPage implements OnInit {
     private route: ActivatedRoute,
     private api : ApiServiceService,
     private router: Router,
+
 
   ) {
 
