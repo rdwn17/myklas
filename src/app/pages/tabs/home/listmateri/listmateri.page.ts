@@ -47,51 +47,11 @@ export class ListmateriPage implements OnInit {
     this.GetListMateri(nim);
 
   }
+  doBack(){
+    this.router.navigateByUrl('tabs')
+  }
 
 
 
-  // async getAllPemilihan() {
-  //   const res = await fetch('https://test.jamaahcoding.my.id/api/show-list-materi/7'  , {
-  //     method: 'GET',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       'Authorization': 'Bearer ' + localStorage.getItem('token')
-  //     }
-  //   });
-
-  //   const json = await res.json();
-  //   this.DataUser = json.data;
-  // }
-
-  // ionViewDidEnter() {
-  //   console.log("jika selesai loading");
-  //   this.GetListMateri();
-  // }
-
-  // ionViewDidEnter() {
-  //   console.log("jika selesai loading");
-  //   // this.getAllPemilihan();
-  //   this.GetListMateri(1);
-  // }
-
-
-
-  // ambilMahasiswa(nim : any) {
-  // this.api.GetListByMapel(nim).subscribe
-  // // ((res: any) =>
-  // // {
-  // //     console.log('sukses', res);
-  // //     // let mahasiswa = res;
-
-  // //     //console.log(mahasiswa);
-  // //     // this.nama = mahasiswa.nama;
-  // //     // this.alamat = mahasiswa.alamat;
-  // //   }, (error: any) => {
-  // //     error
-  // //     console.log('error', error);
-  // //     // alert('gagal ambil data');
-  // //   }
-  // //   )
-  // }
 
 }

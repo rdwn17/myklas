@@ -32,5 +32,8 @@ export class ProfilePage implements OnInit {
   ngOnInit() {
     this.getAllPemilihan();
   }
+  doBack(){
+    this.router.navigateByUrl('tabs')
+  }
 
 }

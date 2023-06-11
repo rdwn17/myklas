@@ -18,10 +18,7 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
-  {
-    path: 'materi',
-    loadChildren: () => import('./pages/materi/materi.module').then( m => m.MateriPageModule)
-  },
+
   {
     path: 'tugas',
     loadChildren: () => import('./pages/tugas/tugas.module').then( m => m.TugasPageModule)

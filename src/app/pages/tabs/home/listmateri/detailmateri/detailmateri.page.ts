@@ -16,6 +16,7 @@ export class DetailmateriPage implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private api : ApiServiceService,
+    private router: Router,
 
   ) {
 
@@ -35,6 +36,9 @@ export class DetailmateriPage implements OnInit {
       console.log('Data User ===>'+JSON.stringify( res['data']) );
       console.log('berhasil')
     });
+  }
+  doBack(){
+    this.router.navigateByUrl('tabs')
   }
 
   // getPhotoFromAPI(nim:any) {
